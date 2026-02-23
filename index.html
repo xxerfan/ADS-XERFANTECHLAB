@@ -1,0 +1,486 @@
+<!doctype html>
+<!-- ========================================
+     LANDING PAGE - ADS ELÉTRICA + XERFAN TECH LAB
+     Análise de Modalidade Tarifária (GMT)
+     Versão: 1.0.0
+     100% HTML + CSS Puro - Sem JavaScript
+     ======================================== -->
+<html lang="pt-BR">
+  <!-- Define o idioma da página como Português Brasileiro -->
+
+  <head>
+    <!-- Configurações de metadados e links externos -->
+
+    <meta charset="UTF-8" />
+    <!-- Define codificação de caracteres UTF-8 para suportar acentos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura viewport responsivo para mobile: largura = largura do dispositivo, zoom inicial = 1 -->
+
+    <meta
+      name="description"
+      content="Reduza até 25% da sua conta de energia sem obra. Auditoria técnica de contratos de energia elétrica - Xerfan Tech Lab + ADS Elétrica"
+    />
+    <!-- Descrição da página para SEO (aparece nos resultados do Google) -->
+
+    <title>
+      Análise de Modalidade Tarifária - Xerfan Tech Lab + ADS Elétrica
+    </title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link para o arquivo CSS externo -->
+  </head>
+
+  <body>
+    <!-- Corpo da página - todo conteúdo visível -->
+
+    <!-- ===== HEADER COM LOGOS ===== -->
+    <header class="header">
+      <!-- Cabeçalho fixo no topo da página -->
+
+      <div class="container">
+        <!-- Container centralizado com largura máxima -->
+
+        <div class="header-content">
+          <!-- Conteúdo do header com flexbox -->
+
+          <div class="logo-container">
+            <!-- Container para os logos -->
+
+            <img
+              src="https://customer-assets.emergentagent.com/job_92d44f32-8d43-4d5d-bf31-6c87efc62f8e/artifacts/zi1ysx8t_ynmn4d9e_301128542_474740037997909_4267223509653017477_n.png"
+              alt="ADS Elétrica"
+              class="logo logo-primary"
+            />
+            <!-- Logo ADS Elétrica (principal) - maior -->
+
+            <span class="partnership-text">+</span>
+            <!-- Símbolo \"+\" indicando parceria -->
+
+            <img
+              src="https://customer-assets.emergentagent.com/job_92d44f32-8d43-4d5d-bf31-6c87efc62f8e/artifacts/mgqsz9yv_1000454433.png"
+              alt="Xerfan Tech Lab"
+              class="logo"
+            />
+            <!-- Logo Xerfan Tech Lab (parceira) - menor -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== SEÇÃO HERO (TOPO PRINCIPAL) ===== -->
+    <section class="hero">
+      <!-- Seção principal do topo com título impactante -->
+
+      <div class="container">
+        <!-- Container centralizado -->
+
+        <div class="hero-content">
+          <!-- Conteúdo do hero com animação de entrada -->
+
+          <h1>
+            Reduza até <span class="hero-highlight">25%</span> da sua conta de
+            energia <span class="hero-highlight">sem obra</span>
+          </h1>
+          <!-- Título principal com destaques em gradiente laranja -->
+
+          <div class="hero-subtitle">
+            Auditoria técnica de contratos de energia – Xerfan Tech Lab + ADS
+            Elétrica
+          </div>
+          <!-- Subtítulo em maiúsculas -->
+
+          <p class="hero-text">
+            Especialistas em engenharia elétrica aplicada à gestão de contratos
+            de energia, auditoria tarifária e eficiência energética para
+            empresas que buscam redução de custos real e mensurável.
+          </p>
+          <!-- Texto descritivo do serviço -->
+
+          <a href="#cta" class="btn-primary">Solicitar Análise Gratuita</a>
+          <!-- Botão CTA que leva à seção de contato (scroll suave) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROBLEMAS IDENTIFICADOS ===== -->
+    <section class="section">
+      <!-- Seção de problemas que o serviço resolve -->
+
+      <div class="container">
+        <!-- Container centralizado -->
+
+        <div class="card slide-in">
+          <!-- Card com animação de entrada lateral -->
+
+          <h2>⚠️ Problemas Identificados</h2>
+          <!-- Título da seção com emoji de alerta -->
+
+          <p>
+            <strong style="color: #ff7a00; font-size: 1.3rem"
+              >Muitas empresas pagam valores indevidos por:</strong
+            >
+          </p>
+          <!-- Texto introdutório em destaque -->
+
+          <ul class="icon-list">
+            <!-- Lista com ícones de raio -->
+
+            <li>Modalidade tarifária incorreta para o perfil de consumo</li>
+            <!-- Cada item da lista tem ícone de raio automático via CSS ::before -->
+
+            <li>Demanda contratada acima ou abaixo do necessário</li>
+            <li>Penalidades por fator de potência</li>
+            <li>Uso inadequado no horário de ponta</li>
+            <li>Erros de faturamento da concessionária</li>
+            <li>Contratos desatualizados após expansão da carga</li>
+          </ul>
+
+          <div class="highlight-box">
+            <!-- Caixa de destaque com número grande -->
+
+            <div class="highlight-number">10% - 25%</div>
+            <!-- Número grande em destaque -->
+
+            <div class="highlight-text">
+              Economias comuns sem necessidade de obra!
+            </div>
+            <!-- Texto explicativo -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESCOPO DO SERVIÇO ===== -->
+    <section class="section">
+      <!-- Seção detalhando o que está incluído no serviço -->
+
+      <div class="container">
+        <div class="card">
+          <!-- Card sem animação específica -->
+
+          <h2>🔧 Escopo Completo do Serviço</h2>
+          <!-- Título com emoji de ferramenta -->
+
+          <ul class="icon-list">
+            <!-- Lista completa de serviços incluídos -->
+
+            <li>Análise detalhada das últimas 12 a 24 faturas</li>
+            <li>Estudo comparativo da demanda medida × contratada</li>
+            <li>Simulação de todas as modalidades tarifárias disponíveis</li>
+            <li>Avaliação de horário de ponta e fora ponta</li>
+            <li>Verificação de fator de potência e penalidades</li>
+            <li>Auditoria completa de cobranças indevidas</li>
+            <li>Estudo de crescimento de carga futura</li>
+            <li>Relatório técnico detalhado com economia estimada</li>
+            <li>Plano de ação detalhado para implementação</li>
+            <li>Acompanhamento junto à concessionária até regularização</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESULTADOS ESPERADOS ===== -->
+    <section
+      class="section"
+      style="
+        background: linear-gradient(
+          180deg,
+          transparent 0%,
+          rgba(255, 122, 0, 0.03) 50%,
+          transparent 100%
+        );
+      "
+    >
+      <!-- Seção com background gradiente sutil laranja -->
+
+      <div class="container">
+        <div class="card">
+          <h2>📈 Resultados Garantidos</h2>
+          <!-- Título com emoji de gráfico crescente -->
+
+          <ul class="icon-list">
+            <!-- Lista de resultados esperados -->
+
+            <li>Redução real e mensurável da conta de energia</li>
+            <li>Eliminação de multas e penalidades</li>
+            <li>Ajuste correto da demanda contratada</li>
+            <li>Previsibilidade financeira mensal</li>
+            <li>Segurança técnica e jurídica do contrato</li>
+            <li>Otimização contínua da operação elétrica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIFERENCIAL TÉCNICO ===== -->
+    <section class="section">
+      <!-- Seção destacando os diferenciais competitivos -->
+
+      <div class="container">
+        <div class="card">
+          <h2>⭐ Diferencial Técnico</h2>
+          <!-- Título com emoji de estrela -->
+
+          <ul class="icon-list">
+            <!-- Lista de diferenciais -->
+
+            <li>
+              Experiência real em instalações BT (Baixa Tensão) e MT (Média
+              Tensão)
+            </li>
+            <li>Engenharia rigorosa conforme normas brasileiras</li>
+            <li>Relatório claro e objetivo para diretoria e financeiro</li>
+            <li>Acompanhamento completo até implementação da solução</li>
+            <li>Sem promessas vagas – economia calculada com base real</li>
+            <li>Integração perfeita com a manutenção elétrica existente</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== METODOLOGIA ===== -->
+    <section class="section">
+      <!-- Seção explicando o processo em 7 passos -->
+
+      <div class="container">
+        <div class="card">
+          <h2>⚙️ Metodologia Comprovada</h2>
+          <!-- Título com emoji de engrenagem -->
+
+          <div class="methodology-grid">
+            <!-- Grid responsivo para os passos -->
+
+            <div class="method-step">
+              <!-- Cada passo é um card individual -->
+
+              <div class="method-number">1</div>
+              <!-- Número do passo em círculo laranja -->
+
+              <div class="method-text">Cliente envia faturas</div>
+              <!-- Descrição do passo -->
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">2</div>
+              <div class="method-text">Diagnóstico técnico</div>
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">3</div>
+              <div class="method-text">Simulação tarifária</div>
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">4</div>
+              <div class="method-text">Relatório técnico</div>
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">5</div>
+              <div class="method-text">Aprovação do cliente</div>
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">6</div>
+              <div class="method-text">Solicitação à concessionária</div>
+            </div>
+
+            <div class="method-step">
+              <div class="method-number">7</div>
+              <div class="method-text">Monitoramento pós-implementação</div>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <!-- Caixa de destaque para o prazo -->
+
+            <div class="highlight-number">5-7</div>
+            <!-- Número de dias em destaque -->
+
+            <div class="highlight-text">dias úteis de prazo médio</div>
+            <!-- Texto explicativo -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODELO DE CONTRATAÇÃO ===== -->
+    <section class="section">
+      <!-- Seção com opções de contratação -->
+
+      <div class="container">
+        <div class="card">
+          <h2>💼 Modelo de Contratação Flexível</h2>
+          <!-- Título com emoji de maleta -->
+
+          <div class="contract-grid">
+            <!-- Grid com 2 colunas (1 em mobile) -->
+
+            <div class="contract-option">
+              <!-- Primeira opção de contratação -->
+
+              <h3 class="contract-title">Opção 1</h3>
+              <!-- Título da opção -->
+
+              <p
+                style="
+                  font-size: 1.4rem;
+                  font-weight: 700;
+                  color: #ff7a00;
+                  margin: 1.5rem 0;
+                "
+              >
+                Taxa Fixa
+              </p>
+              <!-- Nome do modelo em destaque -->
+
+              <p>
+                Investimento único para análise completa e implementação da
+                solução
+              </p>
+              <!-- Descrição do modelo -->
+            </div>
+
+            <div class="contract-option">
+              <!-- Segunda opção de contratação -->
+
+              <h3 class="contract-title">Opção 2</h3>
+              <p
+                style="
+                  font-size: 1.4rem;
+                  font-weight: 700;
+                  color: #ff7a00;
+                  margin: 1.5rem 0;
+                "
+              >
+                Percentual da Economia
+              </p>
+              <p>Pagamento baseado exclusivamente nos resultados obtidos</p>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <!-- Caixa de destaque para garantia -->
+
+            <div class="highlight-text" style="font-size: 1.5rem">
+              🎯 Sem economia comprovada → sem cobrança
+            </div>
+            <!-- Garantia em destaque -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA PRINCIPAL (CALL TO ACTION) ===== -->
+    <section class="section" id="cta">
+      <!-- Seção de conversão principal com id=\"cta\" para âncora -->
+
+      <div class="container">
+        <div class="cta-section">
+          <!-- Card especial com animação de background rotativo -->
+
+          <div class="cta-content">
+            <!-- Conteúdo acima da animação (z-index: 2) -->
+
+            <h2 class="cta-title">📋 Estudo Preliminar 100% Gratuito</h2>
+            <!-- Título do CTA com emoji de clipboard -->
+
+            <p class="cta-text">
+              Envie sua última fatura e descubra o potencial de economia da sua
+              empresa<br />
+              <strong>sem compromisso e sem custos!</strong>
+            </p>
+            <!-- Texto persuasivo -->
+
+            <a
+              href="https://wa.me/5521987018539?text=Olá!%20Gostaria%20de%20solicitar%20uma%20análise%20gratuita%20da%20minha%20conta%20de%20energia."
+              class="btn-primary btn-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              📱 Falar no WhatsApp Agora
+            </a>
+            <!-- Botão WhatsApp com link direto (wa.me) -->
+            <!-- target=\"_blank\" = abre em nova aba -->
+            <!-- rel=\"noopener noreferrer\" = segurança ao abrir link externo -->
+
+            <div class="qr-code-container">
+              <!-- Container branco para o QR Code -->
+
+              <img
+                src="https://customer-assets.emergentagent.com/job_92d44f32-8d43-4d5d-bf31-6c87efc62f8e/artifacts/upfdxy75_QR_WhatsApp_ADS_GMT.png"
+                alt="QR Code WhatsApp"
+              />
+              <!-- Imagem do QR Code fornecida pelo cliente -->
+            </div>
+
+            <p class="qr-label">Escaneie para contato direto</p>
+            <!-- Label explicativa abaixo do QR Code -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer class="footer">
+      <!-- Rodapé da página com informações de compliance e contato -->
+
+      <div class="container">
+        <!-- Container centralizado -->
+
+        <div class="footer-compliance">
+          <!-- Informações de conformidade técnica -->
+
+          <strong>Serviço executado conforme:</strong>
+          <!-- Título em destaque laranja (via CSS) -->
+
+          Regulamentações da ANEEL • Boas práticas de engenharia elétrica<br />
+          ABNT NBR 5410 • NR-10 • Normas técnicas aplicáveis
+          <!-- Lista de normas e regulamentações -->
+        </div>
+
+        <div class="footer-contacts">
+          <!-- Container flexbox para cards de contato -->
+
+          <div class="contact-card">
+            <!-- Card de contato - Rodrigo -->
+
+            <div class="contact-name">Rodrigo</div>
+            <!-- Nome em destaque laranja -->
+
+            <div class="contact-company">
+              Xerfan Tech Lab Soluções Tecnológicas
+            </div>
+            <!-- Empresa -->
+          </div>
+
+          <div class="contact-card">
+            <!-- Card de contato - Alex dos Santos -->
+
+            <div class="contact-name">Alex dos Santos</div>
+            <!-- Nome em destaque laranja -->
+
+            <div class="contact-company">
+              ADS Instalações e Projetos Elétricos
+            </div>
+            <!-- Empresa -->
+
+            <div class="contact-email">santos_alex@id.uff.br</div>
+            <!-- Email em branco -->
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <!-- Linha de copyright -->
+
+          © 2025 ADS Elétrica + Xerfan Tech Lab. Todos os direitos reservados.
+          <!-- Texto de copyright -->
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- Fim do corpo da página -->
+</html>
+<!-- Fim do documento HTML -->

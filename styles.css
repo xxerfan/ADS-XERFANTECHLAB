@@ -1,0 +1,769 @@
+"/* ========================================
+   LANDING PAGE - ADS ELÉTRICA + XERFAN TECH LAB
+   Análise de Modalidade Tarifária (GMT)
+   Arquivo: styles.css
+   Versão: 1.0.0
+   100% CSS Puro - Sem JavaScript
+   ======================================== */
+
+/* ===== RESET E CONFIGURAÇÕES BÁSICAS ===== */
+* {
+    margin: 0; /* Remove margem padrão de todos os elementos */
+    padding: 0; /* Remove padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+}
+
+html {
+    scroll-behavior: smooth; /* Ativa rolagem suave ao clicar em âncoras (#cta) */
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define fontes do sistema */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    color: #ffffff; /* Cor de texto padrão: branco */
+    background: #000000; /* Cor de fundo: preto profundo */
+    min-height: 100vh; /* Altura mínima de 100% da tela */
+    overflow-x: hidden; /* Esconde scroll horizontal para evitar bugs em animações */
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamanho responsivo: min 2.5rem, ideal 5vw, max 4rem */
+    font-weight: 900; /* Peso extra bold para título principal */
+    letter-spacing: -1px; /* Reduz espaço entre letras para títulos grandes */
+    margin-bottom: 1.5rem; /* Espaço abaixo do título */
+    text-shadow: 2px 2px 8px rgba(255,122,0,0.3); /* Sombra laranja suave no texto */
+    line-height: 1.1; /* Altura de linha reduzida para títulos */
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem); /* Tamanho responsivo para subtítulos */
+    font-weight: 700; /* Peso bold */
+    margin-bottom: 2rem; /* Espaço abaixo do subtítulo */
+    color: #ff7a00; /* Cor laranja energia */
+    text-transform: uppercase; /* Transforma texto em maiúsculas */
+    letter-spacing: 1px; /* Aumenta espaço entre letras */
+}
+
+h3 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem); /* Tamanho responsivo para títulos menores */
+    font-weight: 600; /* Peso semi-bold */
+    margin-bottom: 1rem; /* Espaço abaixo */
+    color: #ff7a00; /* Cor laranja energia */
+}
+
+p {
+    font-size: clamp(1rem, 1.8vw, 1.2rem); /* Tamanho responsivo para parágrafos */
+    margin-bottom: 1rem; /* Espaço entre parágrafos */
+    color: #e0e0e0; /* Cor cinza claro para melhor legibilidade */
+    line-height: 1.7; /* Espaçamento confortável entre linhas */
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento lateral interno */
+}
+
+.section {
+    padding: 5rem 0; /* Espaçamento vertical grande entre seções */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos */
+}
+
+/* ===== HEADER COM LOGOS ===== */
+.header {
+    background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%); /* Gradiente vertical escuro */
+    padding: 1.5rem 0; /* Espaçamento vertical interno */
+    border-bottom: 2px solid rgba(255,122,0,0.3); /* Borda laranja semitransparente */
+    position: sticky; /* Fixa o header ao rolar a página */
+    top: 0; /* Posição no topo */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo (glassmorphism) */
+}
+
+.header-content {
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 2rem; /* Espaço entre elementos */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+.logo-container {
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 2rem; /* Espaço entre logos */
+}
+
+.logo {
+    height: 60px; /* Altura padrão dos logos */
+    width: auto; /* Largura proporcional automática */
+    filter: drop-shadow(0 4px 8px rgba(255,122,0,0.2)); /* Sombra laranja nos logos */
+    transition: transform 0.3s ease; /* Transição suave de 0.3s */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Aumenta 5% ao passar o mouse */
+}
+
+.logo-primary {
+    height: 80px; /* Logo ADS maior (principal) */
+}
+
+.partnership-text {
+    font-size: 0.9rem; /* Tamanho do símbolo \"+\" */
+    color: #ff7a00; /* Cor laranja */
+    font-weight: 600; /* Peso semi-bold */
+    text-transform: uppercase; /* Maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* ===== SEÇÃO HERO ===== */
+.hero {
+    min-height: 90vh; /* Ocupa 90% da altura da tela */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    background: 
+        radial-gradient(ellipse at top, rgba(255,122,0,0.15) 0%, transparent 60%), /* Gradiente radial laranja no topo */
+        radial-gradient(ellipse at bottom right, rgba(255,122,0,0.1) 0%, transparent 50%), /* Gradiente laranja canto inferior direito */
+        #000000; /* Fundo preto sólido */
+    position: relative; /* Permite posicionamento de pseudo-elemento */
+    overflow: hidden; /* Esconde partes da animação que saem da área */
+}
+
+.hero::before {
+    content: ''; /* Cria pseudo-elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* Topo */
+    left: 0; /* Esquerda */
+    right: 0; /* Direita */
+    bottom: 0; /* Inferior */
+    background: 
+        repeating-linear-gradient(
+            90deg, /* Direção horizontal */
+            transparent, /* Transparente */
+            transparent 98px, /* Transparente por 98px */
+            rgba(255,122,0,0.03) 100px /* Linha laranja muito sutil a cada 100px */
+        ),
+        repeating-linear-gradient(
+            0deg, /* Direção vertical */
+            transparent, /* Transparente */
+            transparent 98px, /* Transparente por 98px */
+            rgba(255,122,0,0.03) 100px /* Linha laranja muito sutil a cada 100px */
+        );
+    animation: slideGrid 30s linear infinite; /* Animação de 30s que se repete infinitamente */
+}
+
+/* Animação do grid no background */
+@keyframes slideGrid {
+    0% { transform: translate(0, 0); } /* Posição inicial */
+    100% { transform: translate(100px, 100px); } /* Move 100px diagonal */
+}
+
+.hero-content {
+    position: relative; /* Fica acima do pseudo-elemento ::before */
+    z-index: 2; /* Garante que fique acima da animação de fundo */
+    text-align: center; /* Centraliza texto */
+    animation: fadeInUp 1s ease-out; /* Animação de entrada suave */
+}
+
+/* Animação de entrada do conteúdo hero */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(30px); /* 30px abaixo */
+    }
+    to {
+        opacity: 1; /* Termina visível */
+        transform: translateY(0); /* Na posição original */
+    }
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.4rem); /* Tamanho responsivo */
+    color: #ff7a00; /* Cor laranja */
+    font-weight: 600; /* Peso semi-bold */
+    margin-bottom: 2rem; /* Espaço abaixo */
+    text-transform: uppercase; /* Maiúsculas */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+}
+
+.hero-text {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem); /* Tamanho responsivo */
+    max-width: 800px; /* Largura máxima para legibilidade */
+    margin: 0 auto 3rem; /* Centraliza horizontalmente e adiciona espaço abaixo */
+    line-height: 1.8; /* Espaçamento confortável entre linhas */
+    color: #cccccc; /* Cinza médio claro */
+}
+
+.hero-highlight {
+    display: inline-block; /* Permite transformações */
+    background: linear-gradient(135deg, #ff7a00, #ff9933); /* Gradiente laranja diagonal */
+    -webkit-background-clip: text; /* Aplica o gradiente no texto (Chrome/Safari) */
+    -webkit-text-fill-color: transparent; /* Torna o texto transparente para mostrar gradiente */
+    background-clip: text; /* Aplica o gradiente no texto (padrão) */
+    font-weight: 700; /* Peso bold */
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Gradiente diagonal para profundidade */
+    border-radius: 20px; /* Bordas muito arredondadas */
+    padding: 3rem; /* Espaçamento interno generoso */
+    margin-bottom: 2.5rem; /* Espaço entre cards */
+    box-shadow: 
+        0 10px 40px rgba(0,0,0,0.5), /* Sombra principal escura */
+        inset 0 1px 0 rgba(255,122,0,0.1); /* Sombra interna laranja sutil no topo */
+    border: 1px solid rgba(255,122,0,0.2); /* Borda laranja semitransparente */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Transição suave com curva personalizada */
+    position: relative; /* Permite pseudo-elemento */
+    overflow: hidden; /* Esconde overflow da animação */
+}
+
+.card::before {
+    content: ''; /* Cria pseudo-elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* No topo do card */
+    left: 0; /* Esquerda */
+    right: 0; /* Direita */
+    height: 4px; /* Altura da linha animada */
+    background: linear-gradient(90deg, #ff7a00, #ff9933, #ff7a00); /* Gradiente laranja horizontal */
+    background-size: 200% 100%; /* Tamanho duplicado para animação */
+    animation: shimmer 3s linear infinite; /* Animação de brilho */
+}
+
+/* Animação de brilho no topo dos cards */
+@keyframes shimmer {
+    0% { background-position: -200% 0; } /* Começa fora à esquerda */
+    100% { background-position: 200% 0; } /* Termina fora à direita */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Move 8px para cima ao passar mouse */
+    box-shadow: 
+        0 20px 60px rgba(255,122,0,0.2), /* Sombra laranja maior */
+        0 0 40px rgba(255,122,0,0.1); /* Brilho laranja ao redor */
+    border-color: rgba(255,122,0,0.4); /* Borda laranja mais visível */
+}
+
+/* ===== LISTAS COM ÍCONES ===== */
+.icon-list {
+    list-style: none; /* Remove bullets padrão */
+    padding-left: 0; /* Remove padding padrão */
+}
+
+.icon-list li {
+    position: relative; /* Permite posicionamento do ícone */
+    padding: 1rem 0 1rem 3rem; /* Espaçamento: topo/baixo 1rem, esquerda 3rem para o ícone */
+    font-size: clamp(1rem, 1.8vw, 1.2rem); /* Tamanho responsivo */
+    border-bottom: 1px solid rgba(255,122,0,0.1); /* Linha divisória sutil */
+    transition: all 0.3s ease; /* Transição suave */
+    color: #e0e0e0; /* Cor cinza claro */
+}
+
+.icon-list li:last-child {
+    border-bottom: none; /* Remove borda do último item */
+}
+
+.icon-list li::before {
+    content: '⚡'; /* Ícone de raio (emoji) */
+    position: absolute; /* Posicionamento absoluto */
+    left: 0; /* Alinhado à esquerda */
+    top: 1rem; /* Alinhado com o texto */
+    color: #ff7a00; /* Cor laranja */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    animation: pulse 2s ease-in-out infinite; /* Animação de pulso */
+}
+
+/* Animação de pulso nos ícones */
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); } /* Estado normal */
+    50% { opacity: 0.8; transform: scale(1.1); } /* Aumenta e fica levemente transparente */
+}
+
+.icon-list li:hover {
+    background: rgba(255,122,0,0.05); /* Fundo laranja muito sutil ao passar mouse */
+    padding-left: 3.5rem; /* Aumenta padding (desloca texto para direita) */
+    color: #ffffff; /* Texto branco puro */
+}
+
+/* ===== DESTAQUE NUMÉRICO ===== */
+.highlight-box {
+    background: linear-gradient(135deg, rgba(255,122,0,0.15), rgba(255,122,0,0.05)); /* Gradiente laranja sutil */
+    border: 2px solid #ff7a00; /* Borda laranja sólida */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 2rem; /* Espaçamento interno */
+    margin: 2rem 0; /* Espaço vertical */
+    text-align: center; /* Centraliza conteúdo */
+}
+
+.highlight-number {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Tamanho grande responsivo */
+    font-weight: 900; /* Peso extra bold */
+    color: #ff7a00; /* Cor laranja */
+    line-height: 1; /* Sem espaço extra entre linhas */
+    margin-bottom: 0.5rem; /* Pequeno espaço abaixo */
+    text-shadow: 0 0 20px rgba(255,122,0,0.5); /* Brilho laranja ao redor */
+}
+
+.highlight-text {
+    font-size: clamp(1rem, 2vw, 1.3rem); /* Tamanho responsivo */
+    font-weight: 600; /* Peso semi-bold */
+    color: #ffffff; /* Branco puro */
+}
+
+/* ===== METODOLOGIA ===== */
+.methodology-grid {
+    display: grid; /* Usa CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas: mínimo 200px */
+    gap: 1.5rem; /* Espaço entre itens */
+    margin: 3rem 0; /* Espaço vertical */
+}
+
+.method-step {
+    text-align: center; /* Centraliza conteúdo */
+    padding: 2.5rem 1.5rem; /* Espaçamento interno */
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a); /* Gradiente escuro */
+    border-radius: 15px; /* Bordas arredondadas */
+    border: 2px solid rgba(255,122,0,0.3); /* Borda laranja semitransparente */
+    position: relative; /* Para futuros pseudo-elementos */
+    transition: all 0.4s ease; /* Transição suave */
+}
+
+.method-step:hover {
+    transform: translateY(-10px) scale(1.02); /* Move para cima e aumenta 2% */
+    background: linear-gradient(145deg, #252525, #1a1a1a); /* Gradiente mais claro no hover */
+    border-color: #ff7a00; /* Borda laranja sólida */
+    box-shadow: 0 15px 40px rgba(255,122,0,0.3); /* Sombra laranja */
+}
+
+.method-number {
+    display: inline-flex; /* Flexbox inline para centralizar */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    width: 60px; /* Largura fixa */
+    height: 60px; /* Altura fixa (círculo perfeito) */
+    background: linear-gradient(135deg, #ff7a00, #ff9933); /* Gradiente laranja */
+    color: #000; /* Texto preto para contraste */
+    border-radius: 50%; /* Torna circular */
+    font-weight: 900; /* Peso extra bold */
+    font-size: 1.5rem; /* Tamanho grande */
+    margin-bottom: 1.5rem; /* Espaço abaixo */
+    box-shadow: 0 5px 15px rgba(255,122,0,0.4); /* Sombra laranja */
+}
+
+.method-text {
+    font-size: 1.1rem; /* Tamanho do texto */
+    font-weight: 600; /* Peso semi-bold */
+    color: #ffffff; /* Branco puro */
+}
+
+/* ===== OPÇÕES DE CONTRATAÇÃO ===== */
+.contract-grid {
+    display: grid; /* Usa CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas: mínimo 280px */
+    gap: 2.5rem; /* Espaço entre cards */
+    margin: 3rem 0; /* Espaço vertical */
+}
+
+.contract-option {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f); /* Gradiente escuro */
+    border: 3px solid #ff7a00; /* Borda laranja grossa */
+    border-radius: 20px; /* Bordas muito arredondadas */
+    padding: 3rem 2rem; /* Espaçamento interno generoso */
+    text-align: center; /* Centraliza conteúdo */
+    transition: all 0.4s ease; /* Transição suave */
+    position: relative; /* Para pseudo-elemento */
+    overflow: hidden; /* Esconde overflow da animação */
+}
+
+.contract-option::before {
+    content: ''; /* Cria pseudo-elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: -50%; /* Começa acima */
+    left: -50%; /* Começa à esquerda */
+    width: 200%; /* Largura dupla */
+    height: 200%; /* Altura dupla */
+    background: radial-gradient(circle, rgba(255,122,0,0.1) 0%, transparent 70%); /* Gradiente radial laranja */
+    opacity: 0; /* Invisível por padrão */
+    transition: opacity 0.4s ease; /* Transição de opacidade */
+}
+
+.contract-option:hover::before {
+    opacity: 1; /* Torna visível no hover */
+}
+
+.contract-option:hover {
+    transform: translateY(-15px); /* Move 15px para cima */
+    box-shadow: 0 20px 50px rgba(255,122,0,0.3); /* Sombra laranja grande */
+    border-color: #ff9933; /* Borda laranja mais clara */
+}
+
+.contract-title {
+    font-size: 2rem; /* Tamanho grande */
+    font-weight: 700; /* Peso bold */
+    color: #ff7a00; /* Cor laranja */
+    margin-bottom: 1rem; /* Espaço abaixo */
+}
+
+/* ===== BOTÕES ===== */
+.btn-primary {
+    display: inline-block; /* Permite dimensões e margens */
+    background: linear-gradient(135deg, #ff7a00, #ff9933); /* Gradiente laranja diagonal */
+    color: #000000; /* Texto preto para contraste */
+    padding: 1.3rem 3.5rem; /* Espaçamento interno grande */
+    border-radius: 50px; /* Bordas totalmente arredondadas (pill) */
+    text-decoration: none; /* Remove sublinhado de links */
+    font-weight: 800; /* Peso extra bold */
+    font-size: clamp(1rem, 2vw, 1.3rem); /* Tamanho responsivo */
+    text-transform: uppercase; /* Maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    margin: 1.5rem 0.5rem; /* Espaço ao redor */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 8px 20px rgba(255,122,0,0.4); /* Sombra laranja */
+    border: none; /* Remove borda padrão */
+    cursor: pointer; /* Cursor de pointer */
+    position: relative; /* Para pseudo-elemento */
+    overflow: hidden; /* Esconde overflow da animação */
+}
+
+.btn-primary::before {
+    content: ''; /* Cria pseudo-elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: 0; /* Topo */
+    left: -100%; /* Começa fora à esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); /* Brilho branco */
+    transition: left 0.5s ease; /* Transição da posição */
+}
+
+.btn-primary:hover::before {
+    left: 100%; /* Move para fora à direita (efeito de brilho passando) */
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05); /* Move para cima e aumenta 5% */
+    box-shadow: 0 12px 30px rgba(255,122,0,0.5); /* Sombra maior */
+    background: linear-gradient(135deg, #ff9933, #ffaa44); /* Gradiente mais claro */
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e); /* Gradiente verde WhatsApp */
+    color: #ffffff; /* Texto branco */
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem); /* Tamanho maior que botão padrão */
+    padding: 1.5rem 4rem; /* Padding maior */
+    margin: 2rem 1rem; /* Mais espaço ao redor */
+    animation: pulseButton 2s infinite; /* Animação de pulso contínua */
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #128c7e, #075e54); /* Gradiente verde escuro no hover */
+}
+
+/* Animação de pulso no botão WhatsApp */
+@keyframes pulseButton {
+    0%, 100% { transform: scale(1); } /* Tamanho normal */
+    50% { transform: scale(1.05); } /* Aumenta 5% */
+}
+
+/* ===== SEÇÃO CTA ===== */
+.cta-section {
+    background: 
+        linear-gradient(145deg, rgba(255,122,0,0.1), rgba(255,122,0,0.05)), /* Gradiente laranja sutil */
+        linear-gradient(145deg, #1a1a1a, #000); /* Gradiente escuro por baixo */
+    border: 3px solid #ff7a00; /* Borda laranja grossa */
+    border-radius: 25px; /* Bordas muito arredondadas */
+    padding: 4rem 3rem; /* Espaçamento interno generoso */
+    text-align: center; /* Centraliza conteúdo */
+    margin: 5rem 0; /* Grande espaço vertical */
+    position: relative; /* Para pseudo-elemento */
+    overflow: hidden; /* Esconde overflow da animação */
+}
+
+.cta-section::before {
+    content: ''; /* Cria pseudo-elemento vazio */
+    position: absolute; /* Posicionamento absoluto */
+    top: -50%; /* Começa acima */
+    left: -50%; /* Começa à esquerda */
+    width: 200%; /* Largura dupla */
+    height: 200%; /* Altura dupla */
+    background: repeating-conic-gradient(
+        from 0deg at 50% 50%, /* Começa do centro */
+        transparent 0deg, /* Transparente */
+        rgba(255,122,0,0.05) 30deg, /* Laranja sutil por 30 graus */
+        transparent 60deg /* Volta transparente */
+    ); /* Cria padrão radial repetido */
+    animation: rotateBg 20s linear infinite; /* Rota continuamente */
+}
+
+/* Animação de rotação do background */
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); } /* Posição inicial */
+    100% { transform: rotate(360deg); } /* Rotação completa */
+}
+
+.cta-content {
+    position: relative; /* Fica acima do pseudo-elemento */
+    z-index: 2; /* Garante que fique acima da animação */
+}
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamanho grande responsivo */
+    font-weight: 900; /* Peso extra bold */
+    color: #ff7a00; /* Cor laranja */
+    margin-bottom: 1.5rem; /* Espaço abaixo */
+    text-shadow: 0 0 20px rgba(255,122,0,0.5); /* Brilho laranja ao redor */
+}
+
+.cta-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Tamanho grande responsivo */
+    font-weight: 700; /* Peso bold */
+    color: #ffffff; /* Branco puro */
+    margin-bottom: 2rem; /* Espaço abaixo */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* ===== QR CODE ===== */
+.qr-code-container {
+    background: #ffffff; /* Fundo branco para o QR Code */
+    width: 250px; /* Largura fixa */
+    height: 250px; /* Altura fixa (quadrado perfeito) */
+    margin: 2rem auto; /* Centraliza horizontalmente e adiciona espaço vertical */
+    border-radius: 20px; /* Bordas arredondadas */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 15px; /* Espaçamento interno */
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.5), /* Sombra escura */
+        0 0 30px rgba(255,122,0,0.3); /* Brilho laranja */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.qr-code-container:hover {
+    transform: scale(1.05); /* Aumenta 5% ao passar mouse */
+}
+
+.qr-code-container img {
+    width: 100%; /* Largura total do container */
+    height: 100%; /* Altura total do container */
+    object-fit: contain; /* Mantém proporções da imagem */
+}
+
+.qr-label {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #ff7a00; /* Cor laranja */
+    font-weight: 600; /* Peso semi-bold */
+    margin-top: 1rem; /* Espaço acima */
+    text-transform: uppercase; /* Maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+    background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%); /* Gradiente vertical escuro */
+    border-top: 3px solid #ff7a00; /* Borda laranja no topo */
+    padding: 4rem 0 2rem; /* Espaçamento interno: topo grande, inferior médio */
+    text-align: center; /* Centraliza conteúdo */
+}
+
+.footer-compliance {
+    font-size: 1rem; /* Tamanho do texto */
+    color: #cccccc; /* Cinza médio claro */
+    margin-bottom: 3rem; /* Grande espaço abaixo */
+    line-height: 1.9; /* Espaçamento confortável entre linhas */
+    max-width: 800px; /* Largura máxima para legibilidade */
+    margin-left: auto; /* Centraliza horizontalmente (parte 1) */
+    margin-right: auto; /* Centraliza horizontalmente (parte 2) */
+}
+
+.footer-compliance strong {
+    color: #ff7a00; /* Cor laranja para destaque */
+    display: block; /* Ocupa linha inteira */
+    margin-bottom: 0.5rem; /* Pequeno espaço abaixo */
+    font-size: 1.2rem; /* Tamanho um pouco maior */
+}
+
+.footer-contacts {
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 3rem; /* Espaço entre cards */
+    flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    margin-bottom: 3rem; /* Espaço abaixo */
+}
+
+.contact-card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Gradiente escuro */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    border: 2px solid #ff7a00; /* Borda laranja */
+    min-width: 280px; /* Largura mínima */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Move 5px para cima ao passar mouse */
+    box-shadow: 0 10px 30px rgba(255,122,0,0.3); /* Sombra laranja */
+}
+
+.contact-name {
+    color: #ff7a00; /* Cor laranja */
+    font-weight: 700; /* Peso bold */
+    font-size: 1.3rem; /* Tamanho grande */
+    margin-bottom: 0.5rem; /* Pequeno espaço abaixo */
+}
+
+.contact-company {
+    color: #cccccc; /* Cinza médio claro */
+    font-size: 1rem; /* Tamanho padrão */
+    margin-bottom: 0.5rem; /* Pequeno espaço abaixo */
+}
+
+.contact-email {
+    color: #ffffff; /* Branco puro */
+    font-size: 0.95rem; /* Tamanho um pouco menor */
+    word-break: break-word; /* Quebra palavras longas (emails) */
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255,122,0,0.3); /* Linha divisória laranja sutil */
+    padding-top: 2rem; /* Espaço acima do texto */
+    color: #888888; /* Cinza médio */
+    font-size: 0.9rem; /* Tamanho pequeno */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e telas médias (até 968px) */
+@media (max-width: 968px) {
+    .section {
+        padding: 3rem 0; /* Reduz padding vertical */
+    }
+
+    .card {
+        padding: 2rem; /* Reduz padding interno dos cards */
+    }
+
+    .logo {
+        height: 50px; /* Reduz tamanho dos logos */
+    }
+
+    .logo-primary {
+        height: 65px; /* Reduz tamanho do logo principal */
+    }
+
+    .methodology-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas menores */
+    }
+
+    .contract-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas médias */
+    }
+
+    .footer-contacts {
+        flex-direction: column; /* Empilha cards verticalmente */
+        gap: 1.5rem; /* Reduz espaço entre cards */
+    }
+}
+
+/* Smartphones e telas pequenas (até 768px) */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh; /* Reduz altura do hero */
+    }
+
+    .header-content {
+        gap: 1rem; /* Reduz espaço entre elementos */
+    }
+
+    .logo-container {
+        flex-direction: column; /* Empilha logos verticalmente */
+        gap: 1rem; /* Reduz espaço entre logos */
+    }
+
+    .card {
+        padding: 1.5rem; /* Reduz ainda mais o padding */
+    }
+
+    .icon-list li {
+        padding: 0.8rem 0 0.8rem 2.5rem; /* Reduz padding */
+    }
+
+    .methodology-grid {
+        grid-template-columns: 1fr; /* Uma coluna em mobile */
+    }
+
+    .btn-primary {
+        padding: 1.2rem 2.5rem; /* Reduz padding dos botões */
+        font-size: 1rem; /* Reduz tamanho da fonte */
+        margin: 1rem 0.5rem; /* Reduz margem */
+    }
+
+    .btn-whatsapp {
+        padding: 1.3rem 3rem; /* Reduz padding do botão WhatsApp */
+    }
+
+    .cta-section {
+        padding: 2.5rem 1.5rem; /* Reduz padding da seção CTA */
+    }
+
+    .qr-code-container {
+        width: 200px; /* Reduz tamanho do QR Code */
+        height: 200px; /* Reduz tamanho do QR Code */
+    }
+}
+
+/* Smartphones muito pequenos (até 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Reduz padding lateral */
+    }
+
+    .section {
+        padding: 2rem 0; /* Reduz padding vertical */
+    }
+
+    .icon-list li {
+        padding: 0.7rem 0 0.7rem 2rem; /* Reduz padding */
+    }
+
+    .icon-list li::before {
+        font-size: 1.2rem; /* Reduz tamanho do ícone */
+    }
+}
+
+/* ===== ANIMAÇÕES DE ENTRADA ===== */
+.fade-in {
+    animation: fadeIn 1s ease-in; /* Animação de fade in */
+}
+
+/* Animação simples de fade in */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; /* Começa invisível */
+        transform: translateY(20px); /* 20px abaixo */
+    }
+    to { 
+        opacity: 1; /* Termina visível */
+        transform: translateY(0); /* Na posição original */
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-out; /* Animação de slide da esquerda */
+}
+
+/* Animação de slide da esquerda */
+@keyframes slideIn {
+    from { 
+        opacity: 0; /* Começa invisível */
+        transform: translateX(-50px); /* 50px à esquerda */
+    }
+    to { 
+        opacity: 1; /* Termina visível */
+        transform: translateX(0); /* Na posição original */
+    }
+}
+"
